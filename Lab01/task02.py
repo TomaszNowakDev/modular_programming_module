@@ -20,8 +20,13 @@ def last_verse():
     print("There'll be no green bottles hanging on the wall.")
 
 
-for x in range(20, 2, -1):
-    sing_verse(x)
-second_last_verse()
-print()
-last_verse()
+def main():
+    for x in range(20, 2, -1):
+        sing_verse(x)
+    second_last_verse()
+    print()
+    last_verse()
+
+
+if __name__ == '__main__':
+    main()
