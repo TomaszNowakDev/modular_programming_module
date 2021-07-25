@@ -35,4 +35,5 @@ def display(avr, gra):
     print(f'{avr:.2f}% - {gra}')
 
 
-main()
+if __name__ == '__main__':
+    main()
