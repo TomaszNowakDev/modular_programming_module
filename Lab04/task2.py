@@ -22,7 +22,7 @@ for i in range(len(a)):
 a.reverse()
 print(a)
 
-# Print the total of all the numbers.
+# sum all items in the list
 s = sum(a)
 print(s)
 
