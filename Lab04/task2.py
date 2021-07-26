@@ -16,7 +16,7 @@ a[-2] = 0
 
 # Use a loop to print the items in the list along with each index.
 for i in range(len(a)):
-    print(f'{i + 1}.\t{a[i]}')
+    print(f'{i}.\t{a[i]}')
 
 # Reverse all the items in the list
 a.reverse()
