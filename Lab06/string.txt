@@ -1,0 +1,8 @@
+Open a connection to the file
+Read all the lines using readlines into a list
+Create an empty list which will hold all the unique words
+For each line of the list
+If the line is not already in the unique list
+Append it to the new list
+Open a writing connection to the file
+Print each word back to the file
