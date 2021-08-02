@@ -7,15 +7,15 @@ def sing_verse(bottles):
 
 
 def second_last_verse():
-    print(f'Two green bottles hanging on the wall,')
-    print(f'Two green bottles hanging on the wall,')
+    print('Two green bottles hanging on the wall,')
+    print('Two green bottles hanging on the wall,')
     print('And if one green bottle should accidentally fall,')
-    print(f"There'll be 1 green bottle hanging on the wall.")
+    print("There'll be 1 green bottle hanging on the wall.")
 
 
 def last_verse():
-    print(f'One green bottle hanging on the wall,')
-    print(f'One green bottle hanging on the wall,')
+    print('One green bottle hanging on the wall,')
+    print('One green bottle hanging on the wall,')
     print('And if one green bottle should accidentally fall,')
     print("There'll be no green bottles hanging on the wall.")
 
