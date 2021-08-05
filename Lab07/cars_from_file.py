@@ -6,6 +6,14 @@ def display(c):
         print(car)
 
 
+def cars_maker(cars, maker):
+    return [car for car in cars if car.make == maker]
+
+
+def do_not_show(cars, maker):
+    return [car for car in cars if car.make != maker]
+
+
 def main():
     with open("carsCSV.csv") as inputs:
         lines = inputs.readlines()
@@ -19,6 +27,12 @@ def main():
         car = Car(make, model, year)
         cars.append(car)
     display(cars)
+    ford_cars = cars_maker(cars, "Ford")
+    print("\nFord cars:")
+    display(ford_cars)
+    print("\nNot Fords: ")
+    not_ford = do_not_show(cars, "Ford")
+    display(not_ford)
 
 
 if __name__ == '__main__':
