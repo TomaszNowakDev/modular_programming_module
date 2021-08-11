@@ -44,6 +44,18 @@ def children(hum):
     return kids
 
 
+def pensioners_list(hum):
+    pensioners = [per.name for per in hum if per.age >= 65]
+    print(f"Pensioners:")
+    return pensioners
+
+
+def working_age(hum):
+    workers = [w.name for w in hum if 18 <= w.age < 65]
+    print(f"People in working age: ")
+    return workers
+
+
 def main():
     with open("people.cvs") as connection:
         lines = connection.readlines()
@@ -63,6 +75,12 @@ def main():
     kids = children(humans)
     display(kids)
     print()
+
+    pensioners = pensioners_list(humans)
+    display(pensioners)
+    print()
+    workers = working_age(humans)
+    display(workers)
 
 
 if __name__ == '__main__':
