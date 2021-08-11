@@ -1,3 +1,6 @@
+from matplotlib import pyplot
+
+
 class People:
     def __init__(self, name, age):
         self.name = name
@@ -81,6 +84,13 @@ def main():
     print()
     workers = working_age(humans)
     display(workers)
+
+    age_groups = ['Working age', 'Children', 'Pensioners']
+    preferences = [len(workers), len(kids), len(pensioners)]
+    fig, ax = pyplot.subplots()
+    ax.pie(preferences, labels=age_groups, autopct='%1.1f%%')
+    ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    pyplot.show()
 
 
 if __name__ == '__main__':
