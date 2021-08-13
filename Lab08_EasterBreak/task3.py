@@ -9,6 +9,17 @@ class Book:
         return f"IBSN = {self.ISBN}, Title = {self.title}, Author = {self.author}, Price = {self.price}"
 
 
+def cheapest(books_list):
+    prices = [p.price for p in books_list]
+    cheap = min(prices)
+    titles = [t.title for t in books_list]
+    authors = [a.author for a in books_list]
+    print(f"Cheapest book(s) cost €{cheap}:")
+    for i in range(len(books_list)):
+        if books_list[i].price == cheap:
+            print(f"{books_list[i].title} writen by {books_list[i].author}")
+
+
 def main():
     with open("books.txt") as connection:
         lines = connection.readlines()
@@ -21,6 +32,8 @@ def main():
             price = int(split_line[3])
             book = Book(ibsn, title, author, price)
             books.append(book)
+
+    cheapest(books)
 
 
 if __name__ == '__main__':
