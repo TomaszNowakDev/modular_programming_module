@@ -7,8 +7,17 @@ def runner():
     return name, time
 
 
+def t_shirt(t):
+    if t < 25:
+        return "Fast"
+    else:
+        return "Getting Faster"
+
+
 def main():
     name, time = runner()
+    fast = t_shirt(time)
+    print(f'T-shirt for {name} : {fast}')
 
 
 if __name__ == '__main__':
