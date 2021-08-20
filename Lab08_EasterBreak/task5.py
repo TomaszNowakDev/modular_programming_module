@@ -12,6 +12,11 @@ def validation_for_input(prompt):
             print("Whole positive numbers only please.")
 
 
+def square():
+    square_side = validation_for_input("What is the side length of the square? ")
+    return square_side ** 2
+
+
 def validation_for_menu(prompt):
     while True:
         try:
@@ -31,7 +36,11 @@ def main():
 
     while choice_main != 5:
         if choice_main == 1:
+            print("=====================")
             print("1. Square")
+            print("=====================")
+            square_area = square()
+            print(f"Area of the square is {square_area}.")
 
         elif choice_main == 2:
             print("2. Rectangle")
@@ -41,7 +50,6 @@ def main():
 
         elif choice_main == 4:
             print("4. Circle")
-
         print(MENU)
         choice_main = validation_for_menu("==> ")
     print("Thank you, goodbye.")
