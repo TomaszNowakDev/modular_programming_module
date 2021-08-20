@@ -23,6 +23,12 @@ def rectangle():
     return rectangle_side_a * rectangle_side_b
 
 
+def triangle():
+    triangle_base = validation_for_input("What is the length of the base of the triangle? ")
+    triangle_height = validation_for_input("What is the length of the height of the triangle? ")
+    return .5 * triangle_base * triangle_height
+
+
 def validation_for_menu(prompt):
     while True:
         try:
@@ -56,7 +62,11 @@ def main():
             print(f"Area of the rectangle is {rectangle_area}.")
 
         elif choice_main == 3:
+            print("=====================")
             print("3. Right-angled triangle")
+            print("=====================")
+            triangle_area = triangle()
+            print(f"Area of the Right-angled triangle is {triangle_area}.")
 
         elif choice_main == 4:
             print("4. Circle")
