@@ -17,6 +17,12 @@ def square():
     return square_side ** 2
 
 
+def rectangle():
+    rectangle_side_a = validation_for_input("What is the length of the base of the rectangle? ")
+    rectangle_side_b = validation_for_input("What is the length of the height of the rectangle? ")
+    return rectangle_side_a * rectangle_side_b
+
+
 def validation_for_menu(prompt):
     while True:
         try:
@@ -43,7 +49,11 @@ def main():
             print(f"Area of the square is {square_area}.")
 
         elif choice_main == 2:
+            print("=====================")
             print("2. Rectangle")
+            print("=====================")
+            rectangle_area = rectangle()
+            print(f"Area of the rectangle is {rectangle_area}.")
 
         elif choice_main == 3:
             print("3. Right-angled triangle")
